@@ -58,11 +58,11 @@ def extract_minimum_learning_data(training_set, validation_set) -> \
 
     # Training data
     X_train = training_set[features]
-    y_train = training_set['target']
+    y_train = training_set['target_nomi_20']
 
     # Validation data
     X_val = validation_set[features]
-    y_val = validation_set['target']
+    y_val = validation_set['target_nomi_20']
 
     print('Done!')
 

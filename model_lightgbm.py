@@ -17,10 +17,12 @@ X_train, y_train, X_val, y_val = \
 ################################################################################
 # Compute prediction
 params = {"n_estimators": 30000,
-          "learning_rate": 0.1,
+          "learning_rate": 0.01,
           "max_depth": 6,
           "num_leaves": 2 ** 6,
-          "colsample_bytree": 0.1}
+          "colsample_bytree": 0.5,
+          "subsample": 0.5,
+          "max_bins": 255}
 
 model = LGBMRegressor(**params)
 
@@ -40,5 +42,5 @@ print('LightGBM model accuracy score: {0:0.4f}'.format(
 label = validation_set.index.values
 
 # Export to csv
-make_csv(label, y_pred, model_name=str(model))
+make_csv(label, y_pred, model_name="lgbm")
 

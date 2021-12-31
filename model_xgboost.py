@@ -18,10 +18,11 @@ X_train, y_train, X_val, y_val = \
 # Compute prediction
 params = {"objective": "reg:logistic",
           'n_estimators': 2000,
-          'learning_rate': 0.1,
-          'max_depth': 8,
-          'alpha': 0.3,
+          'learning_rate': 0.3,
+          'max_depth': 6,
+          "colsample_bytree": 0.3,
           }
+
 xgb_rgs = xgb.XGBRegressor(**params)
 
 spinner = Halo(text='', spinner='dots')
@@ -40,5 +41,5 @@ print('XGBoost model accuracy score: {0:0.4f}'.format(
 label = validation_set.index.values
 
 # Export to csv
-make_csv(label, y_pred, model_name='xgboost')
+make_csv(label, y_pred, model_name="xgboost")
 

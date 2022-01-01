@@ -1,0 +1,15 @@
+
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/numerai.iml
+__pycache__/utils.cpython-310.pyc
+__pycache__/utils_utatc.cpython-310.pyc
+data/296/numerai_live_data_int8.parquet
+data/296/numerai_tournament_data_int8.parquet
+data/297/numerai_live_data_int8.parquet
+data/297/numerai_tournament_data_int8.parquet
+data/numerai_training_data_int8.parquet
+data/numerai_validation_data_int8.parquet
+.idea/vcs.xml
+.idea/workspace.xml
